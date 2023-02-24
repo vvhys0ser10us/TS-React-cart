@@ -70,7 +70,11 @@ const cart_reducer = (state: CartStateType, action: Action): CartStateType => {
         },
         { totalItems: 0, totalPrice: 0 }
       )
-      return { ...state, totalItems, totalPrice }
+
+      /** sort cart based on the item price */
+      const updatedCart = state.cart.sort((a, b) => a.price - b.price)
+
+      return { ...state, totalItems, totalPrice, cart: [...updatedCart] }
     }
 
     case REDUCER_ACTION_TYPE.SUBMIT: {
