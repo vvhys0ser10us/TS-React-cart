@@ -1,5 +1,12 @@
+import React from 'react'
+import { ProductsProvider } from './context/products_context'
+
 function App() {
-  return <div>ts + react cart</div>
+  return (
+    <ProductsProvider>
+      <div>ts + react cart</div>
+    </ProductsProvider>
+  )
 }
 
 export default App
