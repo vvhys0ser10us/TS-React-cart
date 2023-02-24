@@ -1,10 +1,12 @@
-import React from 'react'
 import { ProductsProvider } from './context/products_context'
+import { CartProvider } from './context/cart_context'
 
 function App() {
   return (
     <ProductsProvider>
-      <div>ts + react cart</div>
+      <CartProvider>
+        <div>ts + react cart</div>
+      </CartProvider>
     </ProductsProvider>
   )
 }
