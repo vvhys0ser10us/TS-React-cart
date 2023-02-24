@@ -1,15 +1,15 @@
 import { CartStateType, CartItemType } from '../context/cart_context'
 
-export const REDUCER_ACTION_TYPE = {
-  ADD: 'ADD',
-  REMOVE: 'REMOVE',
-  QUANTITY: 'QUANTITY',
-  TOTAL: 'TOTAL',
-  SUBMIT: 'SUBMIT',
+export enum REDUCER_ACTION_TYPE {
+  ADD = 'ADD',
+  REMOVE = 'REMOVE',
+  QUANTITY = 'QUANTITY',
+  TOTAL = 'TOTAL',
+  SUBMIT = 'SUBMIT',
 }
 
 type Action = {
-  type: string
+  type: REDUCER_ACTION_TYPE
   payload?: CartItemType
 }
 
