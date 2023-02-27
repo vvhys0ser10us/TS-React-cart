@@ -29,7 +29,7 @@ const Header = ({ showCart, setShowCart }: HeaderPropsType) => {
 
 const Wrapper = styled.header`
   padding: 1rem;
-  background: black;
+  border-bottom: 2px solid black;
 
   .header-title {
     width: 95%;
@@ -57,7 +57,7 @@ const Wrapper = styled.header`
     cursor: pointer;
     transition: all 0.5s linear;
     &:hover {
-      background: #777;
+      background: #888;
     }
   }
 `
