@@ -28,7 +28,12 @@ const cart_reducer = (state: CartStateType, action: Action): CartStateType => {
       )
       const qty = itemExists ? itemExists.qty + 1 : 1
 
-      return { ...state, cart: [...filteredCart, { sku, name, price, qty }] }
+      /** sort cart based on the item price */
+      const updatedCart = [...filteredCart, { sku, name, price, qty }].sort(
+        (a, b) => a.price - b.price
+      )
+
+      return { ...state, cart: [...updatedCart] }
     }
 
     case REDUCER_ACTION_TYPE.REMOVE: {
@@ -71,10 +76,7 @@ const cart_reducer = (state: CartStateType, action: Action): CartStateType => {
         { totalItems: 0, totalPrice: 0 }
       )
 
-      /** sort cart based on the item price */
-      const updatedCart = state.cart.sort((a, b) => a.price - b.price)
-
-      return { ...state, totalItems, totalPrice, cart: [...updatedCart] }
+      return { ...state, totalItems, totalPrice }
     }
 
     case REDUCER_ACTION_TYPE.SUBMIT: {
