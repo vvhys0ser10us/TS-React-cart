@@ -32,6 +32,9 @@ const Wrapper = styled.header`
   background: black;
 
   .header-title {
+    width: 95%;
+    max-width: 1270px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
