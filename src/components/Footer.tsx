@@ -6,7 +6,7 @@ const Footer = () => {
 
   return (
     <Wrapper>
-      <h3>Typescript + React Shopping Cart &copy; {year}</h3>
+      <p>Typescript + React Shopping Cart &copy; {year}</p>
     </Wrapper>
   )
 }
@@ -14,7 +14,7 @@ const Footer = () => {
 const Wrapper = styled.footer`
   height: 5rem;
   text-align: center;
-  background: #333;
+  background: black;
   color: #fff;
   letter-spacing: 2px;
   padding: 1rem;

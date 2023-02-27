@@ -24,8 +24,8 @@ const Product = ({ product }: PropsType) => {
 }
 
 const Wrapper = styled.article`
-  background: white;
-  border: 2px solid black;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
   padding: 2rem;
   margin: 2rem;

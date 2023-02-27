@@ -32,6 +32,8 @@ const Header = ({ showCart, setShowCart }: HeaderPropsType) => {
 const Wrapper = styled.header`
   padding: 1rem;
   border-bottom: 2px solid black;
+  height: 100px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 
   .header-title {
     width: 95%;
