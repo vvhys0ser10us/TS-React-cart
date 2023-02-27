@@ -9,13 +9,15 @@ type HeaderPropsType = {
 
 const Header = ({ showCart, setShowCart }: HeaderPropsType) => {
   const { totalItems, totalPrice } = useCartContext()
+  console.log(totalPrice)
+
   return (
     <Wrapper>
       <div className="header-title">
         <h1>Acme Co.</h1>
         <div className="header-info">
           <p>total items: {totalItems}</p>
-          <p>total price: {totalPrice}</p>
+          <p>total price: ${totalPrice.toFixed(2)}</p>
           {showCart ? (
             <button onClick={() => setShowCart(false)}>view product</button>
           ) : (
