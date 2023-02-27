@@ -33,7 +33,7 @@ const cart_reducer = (state: CartStateType, action: Action): CartStateType => {
         (a, b) => a.price - b.price
       )
 
-      return { ...state, cart: [...updatedCart] }
+      return { ...state, cart: updatedCart }
     }
 
     case REDUCER_ACTION_TYPE.REMOVE: {
@@ -62,7 +62,11 @@ const cart_reducer = (state: CartStateType, action: Action): CartStateType => {
       )
       const updatedItem = { ...item, qty }
 
-      return { ...state, cart: [...filteredCart, updatedItem] }
+      const updatedCart = [...filteredCart, updatedItem].sort(
+        (a, b) => a.price - b.price
+      )
+
+      return { ...state, cart: updatedCart }
     }
 
     case REDUCER_ACTION_TYPE.TOTAL: {
